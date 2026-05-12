@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-label="Wedding hero placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d7c0b6"/>
+      <stop offset="0.48" stop-color="#99b5c8"/>
+      <stop offset="1" stop-color="#670626"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="32%" r="62%">
+      <stop offset="0" stop-color="#fff7ef" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff7ef" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#sky)"/>
+  <rect width="1800" height="1200" fill="url(#light)"/>
+  <path d="M0 770 C250 670 410 745 650 690 C900 634 1040 510 1310 570 C1505 612 1630 730 1800 680 L1800 1200 L0 1200 Z" fill="#2c312f" opacity="0.44"/>
+  <path d="M0 905 C250 820 510 810 760 860 C1030 914 1230 1040 1800 895 L1800 1200 L0 1200 Z" fill="#181614" opacity="0.5"/>
+  <circle cx="760" cy="580" r="92" fill="#f2ece4" opacity="0.52"/>
+  <circle cx="910" cy="562" r="100" fill="#f2ece4" opacity="0.48"/>
+  <path d="M730 700 C785 610 870 610 940 700" fill="none" stroke="#f2ece4" stroke-width="18" stroke-linecap="round" opacity="0.65"/>
+</svg>

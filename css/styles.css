@@ -300,7 +300,7 @@ a {
 
 .palette {
   display: grid;
-  grid-template-columns: repeat(3, minmax(112px, 150px));
+  grid-template-columns: repeat(4, minmax(104px, 140px));
   justify-content: center;
   gap: 16px;
   margin-top: 42px;
@@ -407,6 +407,7 @@ a {
   position: relative;
   min-height: 246px;
   display: grid;
+  grid-template-rows: 68px 58px 58px;
   align-content: center;
   justify-items: center;
   padding: clamp(22px, 3vw, 32px) 18px;
@@ -426,7 +427,7 @@ a {
   width: 68px;
   aspect-ratio: 1;
   place-items: center;
-  margin-bottom: 22px;
+  margin: 0;
   border: 1px solid rgba(103, 6, 38, 0.14);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.32);
@@ -444,6 +445,7 @@ a {
 }
 
 .timeline-item time {
+  align-self: end;
   color: var(--color-primary);
   font-family: var(--font-heading);
   font-size: clamp(2.1rem, 3.4vw, 3.2rem);
@@ -451,8 +453,9 @@ a {
 }
 
 .timeline-item p {
+  align-self: start;
   max-width: 170px;
-  margin: 14px auto 0;
+  margin: 10px auto 0;
   color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.05rem, 1.7vw, 1.32rem);
@@ -636,6 +639,7 @@ a {
   .timeline-item:nth-child(-n + 2) {
     min-height: auto;
     grid-template-columns: 72px 1fr;
+    grid-template-rows: auto auto;
     justify-items: start;
     align-items: center;
     padding: 24px 0 24px 24px;

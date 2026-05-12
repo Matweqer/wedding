@@ -17,6 +17,56 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M2 12h20"></path>
+        <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+        <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <path d="M17.5 6.5h.01"></path>
+      </symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4Z"></path>
+        <path d="M22 2 11 13"></path>
+      </symbol>
+      <symbol id="icon-message" viewBox="0 0 24 24">
+        <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8Z"></path>
+      </symbol>
+      <symbol id="icon-guests" viewBox="0 0 24 24">
+        <path d="M8 20v-1.5A4.5 4.5 0 0 1 12.5 14h1A4.5 4.5 0 0 1 18 18.5V20"></path>
+        <circle cx="13" cy="8" r="4"></circle>
+        <path d="M3.5 19v-1a3.5 3.5 0 0 1 3.5-3.5"></path>
+        <path d="M6.5 5.5a3 3 0 0 0 0 5.7"></path>
+      </symbol>
+      <symbol id="icon-rings" viewBox="0 0 24 24">
+        <path d="M9 7 7 3h10l-2 4"></path>
+        <circle cx="9" cy="14" r="5"></circle>
+        <circle cx="15" cy="14" r="5"></circle>
+      </symbol>
+      <symbol id="icon-banquet" viewBox="0 0 24 24">
+        <path d="M4 20h16"></path>
+        <path d="M6 16h12"></path>
+        <path d="M7 16a5 5 0 0 1 10 0"></path>
+        <path d="M12 9V7"></path>
+        <path d="M5 20v-5"></path>
+        <path d="M19 20v-5"></path>
+      </symbol>
+      <symbol id="icon-finale" viewBox="0 0 24 24">
+        <path d="M12 3v3"></path>
+        <path d="M12 18v3"></path>
+        <path d="M3 12h3"></path>
+        <path d="M18 12h3"></path>
+        <path d="m5.6 5.6 2.1 2.1"></path>
+        <path d="m16.3 16.3 2.1 2.1"></path>
+        <path d="m18.4 5.6-2.1 2.1"></path>
+        <path d="m7.7 16.3-2.1 2.1"></path>
+        <circle cx="12" cy="12" r="2.5"></circle>
+      </symbol>
+    </svg>
     <header class="hero" id="top" aria-label="Приглашение на свадьбу">
       <div class="hero__overlay"></div>
       <div class="hero__content reveal">
@@ -51,7 +101,6 @@
       <section class="section location" id="location">
         <div class="section__inner split">
           <div class="section__copy reveal">
-            <p class="eyebrow">Location</p>
             <h2>Место проведения</h2>
             <h3>Капитонов Сад</h3>
             <p>Приятный переулок 3/72, Ростов-на-Дону</p>
@@ -63,16 +112,24 @@
             >
               Открыть на карте
             </a>
-            <div class="location__links" aria-label="Ссылки площадки">
-              <a href="https://kapitonovsad.ru/" target="_blank" rel="noreferrer">
-                Сайт площадки
+            <div class="icon-links location__links" aria-label="Ссылки площадки">
+              <a
+                class="icon-link"
+                href="https://kapitonovsad.ru/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Сайт площадки"
+              >
+                <svg aria-hidden="true"><use href="#icon-globe"></use></svg>
               </a>
               <a
+                class="icon-link"
                 href="https://www.instagram.com/kapitonov_sad/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram площадки"
               >
-                Instagram
+                <svg aria-hidden="true"><use href="#icon-instagram"></use></svg>
               </a>
             </div>
           </div>
@@ -87,18 +144,23 @@
 
       <section class="section dress-code" id="dress-code">
         <div class="section__inner section__inner--narrow reveal">
-          <p class="eyebrow">Dress code</p>
           <h2>Дресс-код</h2>
           <p>
             Нам будет приятно, если вы поддержите цветовую гамму нашей свадьбы
           </p>
           <div class="palette" aria-label="Цветовая палитра свадьбы">
-            <span class="palette__color" style="--swatch: #670626"></span>
-            <span class="palette__color" style="--swatch: #59020b"></span>
-            <span class="palette__color" style="--swatch: #ffbdc5"></span>
-            <span class="palette__color" style="--swatch: #99b5c8"></span>
-            <span class="palette__color" style="--swatch: #acc6dd"></span>
-            <span class="palette__color" style="--swatch: #f2ece4"></span>
+            <div class="palette__item">
+              <span class="palette__color" style="--swatch: #59020b"></span>
+              <span>Винный</span>
+            </div>
+            <div class="palette__item">
+              <span class="palette__color" style="--swatch: #99b5c8"></span>
+              <span>Голубой</span>
+            </div>
+            <div class="palette__item">
+              <span class="palette__color" style="--swatch: #d8cabb"></span>
+              <span>Бежевый</span>
+            </div>
           </div>
         </div>
       </section>
@@ -106,12 +168,11 @@
       <section class="section note-section" id="wishes">
         <div class="section__inner">
           <div class="section__heading reveal">
-            <p class="eyebrow">Wishes</p>
             <h2>Пожелания</h2>
           </div>
           <div class="wishes-grid">
             <article class="wish-card reveal">
-              <span class="wish-card__icon" aria-hidden="true">✕</span>
+              <span class="wish-card__number">01</span>
               <h3>Без цветов</h3>
               <p>
                 Пожалуйста, не дарите цветы — мы не успеем насладиться их
@@ -120,7 +181,7 @@
               </p>
             </article>
             <article class="wish-card reveal">
-              <span class="wish-card__icon" aria-hidden="true">₽</span>
+              <span class="wish-card__number">02</span>
               <h3>Подарки</h3>
               <p>
                 Самым главным подарком для нас будет Ваше хорошее настроение. А
@@ -132,31 +193,40 @@
         </div>
       </section>
 
-      <section class="section gallery-section" id="gallery">
+      <section class="section timeline-section" id="timeline">
         <div class="section__inner">
           <div class="section__heading reveal">
-            <p class="eyebrow">Moments</p>
-            <h2>Галерея</h2>
+            <h2>Тайминги</h2>
           </div>
-          <div class="gallery-grid reveal" aria-label="Галерея фотографий">
-            <button class="gallery-card" type="button" data-gallery-index="0">
-              <img src="images/gallery/gallery-1.svg" alt="Фото пары 1" />
-            </button>
-            <button class="gallery-card" type="button" data-gallery-index="1">
-              <img src="images/gallery/gallery-2.svg" alt="Фото пары 2" />
-            </button>
-            <button class="gallery-card" type="button" data-gallery-index="2">
-              <img src="images/gallery/gallery-3.svg" alt="Фото пары 3" />
-            </button>
-            <button class="gallery-card" type="button" data-gallery-index="3">
-              <img src="images/gallery/gallery-4.svg" alt="Фото пары 4" />
-            </button>
-            <button class="gallery-card" type="button" data-gallery-index="4">
-              <img src="images/gallery/gallery-5.svg" alt="Фото пары 5" />
-            </button>
-            <button class="gallery-card" type="button" data-gallery-index="5">
-              <img src="images/gallery/gallery-6.svg" alt="Фото пары 6" />
-            </button>
+          <div class="timeline-grid reveal" aria-label="Тайминги свадебного дня">
+            <article class="timeline-item">
+              <div class="timeline-item__icon" aria-hidden="true">
+                <svg><use href="#icon-guests"></use></svg>
+              </div>
+              <time datetime="16:00">16:00</time>
+              <p>Сбор гостей</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-item__icon" aria-hidden="true">
+                <svg><use href="#icon-rings"></use></svg>
+              </div>
+              <time datetime="17:00">17:00</time>
+              <p>Выездная регистрация</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-item__icon" aria-hidden="true">
+                <svg><use href="#icon-banquet"></use></svg>
+              </div>
+              <time datetime="18:00">18:00</time>
+              <p>Праздничный банкет</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-item__icon" aria-hidden="true">
+                <svg><use href="#icon-finale"></use></svg>
+              </div>
+              <time datetime="21:00">21:00</time>
+              <p>Завершение торжества</p>
+            </article>
           </div>
         </div>
       </section>
@@ -164,7 +234,6 @@
       <section class="section contacts" id="contacts">
         <div class="section__inner">
           <div class="section__heading reveal">
-            <p class="eyebrow">Contacts</p>
             <h2>Контакты</h2>
             <p class="contacts__intro">
               По всем вопросам вы можете обращаться к нашим свадебным
@@ -176,18 +245,26 @@
               <span class="contact-card__role">Организатор</span>
               <h3>Анна</h3>
               <a href="tel:+79000000000">+7 900 000-00-00</a>
-              <div class="socials" aria-label="Социальные сети Анны">
-                <a href="#" aria-label="Telegram Анны">TG</a>
-                <a href="#" aria-label="WhatsApp Анны">WA</a>
+              <div class="icon-links socials" aria-label="Социальные сети Анны">
+                <a class="icon-link" href="#" aria-label="Telegram Анны">
+                  <svg aria-hidden="true"><use href="#icon-send"></use></svg>
+                </a>
+                <a class="icon-link" href="#" aria-label="WhatsApp Анны">
+                  <svg aria-hidden="true"><use href="#icon-message"></use></svg>
+                </a>
               </div>
             </article>
             <article class="contact-card reveal">
               <span class="contact-card__role">Координатор</span>
               <h3>Мария</h3>
               <a href="tel:+79000000001">+7 900 000-00-01</a>
-              <div class="socials" aria-label="Социальные сети Марии">
-                <a href="#" aria-label="Telegram Марии">TG</a>
-                <a href="#" aria-label="WhatsApp Марии">WA</a>
+              <div class="icon-links socials" aria-label="Социальные сети Марии">
+                <a class="icon-link" href="#" aria-label="Telegram Марии">
+                  <svg aria-hidden="true"><use href="#icon-send"></use></svg>
+                </a>
+                <a class="icon-link" href="#" aria-label="WhatsApp Марии">
+                  <svg aria-hidden="true"><use href="#icon-message"></use></svg>
+                </a>
               </div>
             </article>
           </div>
@@ -198,19 +275,6 @@
     <footer class="footer">
       <p>С любовью, Матвей &amp; Виктория</p>
     </footer>
-
-    <div class="modal" data-modal hidden>
-      <button class="modal__close" type="button" aria-label="Закрыть галерею">
-        ×
-      </button>
-      <button class="modal__nav modal__nav--prev" type="button" aria-label="Предыдущее фото">
-        ‹
-      </button>
-      <img class="modal__image" src="" alt="" />
-      <button class="modal__nav modal__nav--next" type="button" aria-label="Следующее фото">
-        ›
-      </button>
-    </div>
 
     <script src="js/main.js"></script>
   </body>

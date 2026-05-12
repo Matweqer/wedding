@@ -389,8 +389,11 @@ a {
 }
 
 .timeline-section {
+  border-top: 1px solid rgba(103, 6, 38, 0.08);
+  border-bottom: 1px solid rgba(103, 6, 38, 0.08);
   background:
-    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 100%);
+    radial-gradient(circle at 50% 18%, rgba(103, 6, 38, 0.055), transparent 34%),
+    linear-gradient(180deg, #eee3d7 0%, #f4eadf 48%, #eee3d7 100%);
 }
 
 .timeline-grid {
@@ -400,7 +403,8 @@ a {
   margin: 0 auto;
   border-top: 1px solid rgba(103, 6, 38, 0.12);
   border-bottom: 1px solid rgba(103, 6, 38, 0.12);
-  background: rgba(255, 250, 245, 0.34);
+  background: rgba(255, 250, 245, 0.46);
+  box-shadow: 0 24px 70px rgba(67, 3, 24, 0.045);
 }
 
 .timeline-item {
@@ -486,28 +490,23 @@ a {
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 900px;
+  gap: clamp(24px, 5vw, 56px);
+  max-width: 860px;
   margin: 42px auto 0;
 }
 
 .contact-card {
-  padding: 28px 0 0;
+  display: grid;
+  justify-items: center;
+  padding: 28px 20px 0;
   border-top: 1px solid rgba(103, 6, 38, 0.22);
   background: transparent;
   box-shadow: none;
-}
-
-.contact-card__role {
-  color: var(--color-muted);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-align: center;
 }
 
 .contact-card h3 {
-  margin: 18px 0 8px;
+  margin: 0 0 8px;
   color: var(--color-primary);
   font-size: clamp(1.65rem, 3vw, 2.25rem);
 }
@@ -520,6 +519,7 @@ a {
 }
 
 .socials {
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -628,28 +628,46 @@ a {
   }
 
   .timeline-grid {
+    position: relative;
+    width: min(320px, 100%);
     grid-template-columns: 1fr;
+    margin-right: auto;
+    margin-left: auto;
     border-top: 0;
     border-bottom: 0;
     background: transparent;
+  }
+
+  .timeline-grid::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    width: 1px;
+    background: rgba(103, 6, 38, 0.18);
   }
 
   .timeline-item,
   .timeline-item:nth-child(2),
   .timeline-item:nth-child(-n + 2) {
     min-height: auto;
-    grid-template-columns: 72px 1fr;
+    grid-template-columns: 58px minmax(0, 1fr);
     grid-template-rows: auto auto;
+    column-gap: 20px;
     justify-items: start;
     align-items: center;
-    padding: 24px 0 24px 24px;
+    padding: 22px 0 22px 28px;
     border-right: 0;
     border-bottom: 0;
-    border-left: 1px solid rgba(103, 6, 38, 0.18);
+    border-left: 0;
     text-align: left;
   }
 
   .timeline-item__icon {
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
     width: 50px;
     margin: 0;
   }
@@ -660,11 +678,16 @@ a {
   }
 
   .timeline-item time {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
     font-size: 2.12rem;
   }
 
   .timeline-item p {
     grid-column: 2;
+    grid-row: 2;
+    align-self: start;
     max-width: none;
     margin: 6px 0 0;
     font-size: 1.18rem;
@@ -679,6 +702,14 @@ a {
 
   .palette__color {
     height: 68px;
+  }
+
+  .contact-grid {
+    gap: 32px;
+  }
+
+  .contact-card {
+    padding-inline: 0;
   }
 
   .wish-card {

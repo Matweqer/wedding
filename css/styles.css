@@ -415,24 +415,6 @@ a {
   object-fit: cover;
 }
 
-.dress-code__dots {
-  display: none;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.dress-code__dots span {
-  width: 7px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: rgba(103, 6, 38, 0.26);
-}
-
-.dress-code__dots span:first-child {
-  background: var(--color-primary);
-}
-
 .text-panel {
   width: min(820px, 100%);
   padding-block: clamp(14px, 3vw, 28px);
@@ -873,10 +855,6 @@ a {
 
   .dress-code__look img {
     aspect-ratio: 4 / 5.15;
-  }
-
-  .dress-code__dots {
-    display: flex;
   }
 
   .contact-grid {

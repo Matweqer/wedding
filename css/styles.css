@@ -1,7 +1,12 @@
 :root {
-  --color-bg: #f2ece4;
-  --color-bg-soft: #fff9f3;
-  --color-bg-warm: #eee6dc;
+  --color-page: #f4eee7;
+  --color-section: #fffaf5;
+  --color-section-alt: #eee5dc;
+  --color-section-mid: #f1e8df;
+  --color-surface: rgba(255, 250, 245, 0.62);
+  --color-bg: var(--color-page);
+  --color-bg-soft: var(--color-section);
+  --color-bg-warm: var(--color-section-alt);
   --color-primary: #670626;
   --color-primary-dark: #430318;
   --color-accent: #99b5c8;
@@ -9,6 +14,8 @@
   --color-muted: #6f6661;
   --color-white: #ffffff;
   --color-line: rgba(103, 6, 38, 0.14);
+  --color-border: rgba(103, 6, 38, 0.14);
+  --shadow-soft: 0 20px 56px rgba(67, 3, 24, 0.055);
   --font-heading: "Lora", Georgia, serif;
   --font-body: "Manrope", Arial, sans-serif;
   --font-ui: "Manrope", Arial, sans-serif;
@@ -24,7 +31,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-bg-warm);
+  background: var(--color-page);
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -64,12 +71,12 @@ a {
   width: 42px;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(103, 6, 38, 0.16);
+  border: 1px solid var(--color-border);
   border-radius: 50%;
-  background: rgba(255, 250, 245, 0.58);
+  background: var(--color-surface);
   color: var(--color-primary);
   text-decoration: none;
-  box-shadow: 0 10px 28px rgba(67, 3, 24, 0.055);
+  box-shadow: var(--shadow-soft);
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -110,7 +117,7 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(18, 8, 8, 0) 62%, #fff9f3 100%),
+    linear-gradient(180deg, rgba(18, 8, 8, 0) 62%, var(--color-section) 100%),
     linear-gradient(90deg, rgba(22, 8, 9, 0.78) 0%, rgba(22, 8, 9, 0.46) 44%, rgba(22, 8, 9, 0.14) 100%),
     radial-gradient(circle at 74% 42%, rgba(255, 255, 255, 0.1), transparent 42%);
 }
@@ -252,7 +259,7 @@ a {
 
 .button:hover {
   background: var(--color-primary-dark);
-  box-shadow: 0 14px 34px rgba(67, 3, 24, 0.16);
+  box-shadow: 0 14px 34px rgba(67, 3, 24, 0.14);
   transform: translateY(-1px);
 }
 
@@ -262,7 +269,7 @@ a {
 
 .location {
   padding-top: clamp(52px, 7vw, 86px);
-  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+  background: linear-gradient(180deg, var(--color-section) 0%, var(--color-page) 100%);
 }
 
 .location__gallery {
@@ -274,8 +281,8 @@ a {
 
 .location__gallery img,
 .timeline-item {
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  box-shadow: 0 22px 70px rgba(67, 3, 24, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  box-shadow: var(--shadow-soft);
 }
 
 .location__gallery img {
@@ -301,7 +308,7 @@ a {
 
 .dress-code {
   padding-bottom: clamp(72px, 8vw, 118px);
-  background: linear-gradient(180deg, var(--color-bg-soft) 0%, #fffdf9 100%);
+  background: var(--color-section);
 }
 
 .palette {
@@ -326,10 +333,10 @@ a {
 .palette__color {
   width: 100%;
   height: clamp(78px, 9vw, 112px);
-  border: 1px solid rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.74);
   border-radius: 999px;
   background: var(--swatch);
-  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.16), 0 18px 42px rgba(43, 43, 43, 0.08);
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.16), var(--shadow-soft);
 }
 
 .text-panel {
@@ -348,7 +355,7 @@ a {
   border-top: 1px solid rgba(103, 6, 38, 0.08);
   background:
     radial-gradient(circle at 50% 0%, rgba(103, 6, 38, 0.045), transparent 34%),
-    linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
+    linear-gradient(180deg, var(--color-section-alt) 0%, var(--color-page) 100%);
   box-shadow: inset 0 38px 70px rgba(67, 3, 24, 0.035);
 }
 
@@ -363,8 +370,8 @@ a {
 .wish-card {
   min-height: 260px;
   padding: clamp(24px, 3vw, 34px);
-  border: 1px solid rgba(103, 6, 38, 0.16);
-  background: rgba(255, 250, 245, 0.42);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
   box-shadow: none;
   text-align: left;
 }
@@ -402,8 +409,8 @@ a {
   border-top: 1px solid rgba(103, 6, 38, 0.08);
   border-bottom: 1px solid rgba(103, 6, 38, 0.08);
   background:
-    radial-gradient(circle at 50% 18%, rgba(103, 6, 38, 0.055), transparent 34%),
-    linear-gradient(180deg, #eee3d7 0%, #f4eadf 48%, #eee3d7 100%);
+    radial-gradient(circle at 50% 18%, rgba(103, 6, 38, 0.045), transparent 34%),
+    linear-gradient(180deg, var(--color-section-alt) 0%, var(--color-section-mid) 48%, var(--color-section-alt) 100%);
 }
 
 .timeline-grid {
@@ -411,10 +418,10 @@ a {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   max-width: 1120px;
   margin: 0 auto;
-  border-top: 1px solid rgba(103, 6, 38, 0.12);
-  border-bottom: 1px solid rgba(103, 6, 38, 0.12);
-  background: rgba(255, 250, 245, 0.46);
-  box-shadow: 0 24px 70px rgba(67, 3, 24, 0.045);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
 }
 
 .timeline-item {
@@ -426,7 +433,7 @@ a {
   justify-items: center;
   padding: clamp(22px, 3vw, 32px) 18px;
   border-width: 0 1px 0 0;
-  border-color: rgba(103, 6, 38, 0.18);
+  border-color: var(--color-border);
   box-shadow: none;
   background: transparent;
   text-align: center;
@@ -442,9 +449,9 @@ a {
   aspect-ratio: 1;
   place-items: center;
   margin: 0;
-  border: 1px solid rgba(103, 6, 38, 0.14);
+  border: 1px solid var(--color-border);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 250, 245, 0.34);
   color: var(--color-primary);
 }
 
@@ -478,7 +485,7 @@ a {
 }
 
 .contacts {
-  background: var(--color-bg-soft);
+  background: var(--color-section);
 }
 
 .contacts .section__heading {
@@ -522,7 +529,7 @@ a {
   display: grid;
   justify-items: center;
   padding: 28px 20px 0;
-  border-top: 1px solid rgba(103, 6, 38, 0.22);
+  border-top: 1px solid var(--color-border);
   background: transparent;
   box-shadow: none;
   text-align: center;
@@ -549,7 +556,7 @@ a {
 
 .footer {
   padding: 38px 20px;
-  background: var(--color-bg-warm);
+  background: var(--color-section-alt);
   color: var(--color-muted);
   text-align: center;
 }

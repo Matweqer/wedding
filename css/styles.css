@@ -9,8 +9,9 @@
   --color-muted: #6f6661;
   --color-white: #ffffff;
   --color-line: rgba(103, 6, 38, 0.14);
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", Arial, sans-serif;
+  --font-heading: "Lora", Georgia, serif;
+  --font-body: "Manrope", Arial, sans-serif;
+  --font-ui: "Manrope", Arial, sans-serif;
 }
 
 * {
@@ -26,6 +27,7 @@ body {
   background: var(--color-bg-warm);
   color: var(--color-text);
   font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -122,6 +124,7 @@ a {
 .eyebrow {
   margin: 0 0 14px;
   color: inherit;
+  font-family: var(--font-ui);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -133,16 +136,17 @@ a {
 .section h2 {
   margin: 0;
   font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.05;
+  font-weight: 500;
+  line-height: 1.08;
 }
 
 .hero h1 {
-  font-size: clamp(3.25rem, 8.2vw, 7.15rem);
+  font-size: clamp(3.1rem, 7.6vw, 6.7rem);
 }
 
 .hero__date {
   margin: 22px 0 0;
+  font-family: var(--font-ui);
   font-size: clamp(1.05rem, 2.4vw, 1.42rem);
   font-weight: 500;
 }
@@ -177,13 +181,14 @@ a {
 
 .countdown__item span {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.8vw, 3.1rem);
+  font-size: clamp(2rem, 3.7vw, 3rem);
   line-height: 1;
 }
 
 .countdown__item small {
   margin-top: 4px;
   color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-ui);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   text-transform: lowercase;
@@ -205,15 +210,15 @@ a {
 
 .section h2 {
   color: var(--color-primary);
-  font-size: clamp(2.35rem, 4.7vw, 4rem);
+  font-size: clamp(2.3rem, 4.55vw, 3.85rem);
 }
 
 .section h3 {
   margin: 28px 0 8px;
   font-family: var(--font-heading);
   color: var(--color-text);
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
-  line-height: 1.1;
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.14;
 }
 
 .section p {
@@ -239,6 +244,7 @@ a {
   border-radius: 999px;
   background: var(--color-primary);
   color: var(--color-white);
+  font-family: var(--font-ui);
   font-weight: 600;
   text-decoration: none;
   transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
@@ -310,6 +316,7 @@ a {
   display: grid;
   gap: 12px;
   color: var(--color-muted);
+  font-family: var(--font-ui);
   font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -347,15 +354,15 @@ a {
 
 .wishes-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  max-width: 980px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .wish-card {
-  min-height: 236px;
-  padding: clamp(26px, 4vw, 42px);
+  min-height: 260px;
+  padding: clamp(24px, 3vw, 34px);
   border: 1px solid rgba(103, 6, 38, 0.16);
   background: rgba(255, 250, 245, 0.42);
   box-shadow: none;
@@ -364,8 +371,9 @@ a {
 
 .wish-card__number {
   display: block;
-  margin-bottom: 34px;
+  margin-bottom: 28px;
   color: var(--color-primary);
+  font-family: var(--font-ui);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -374,13 +382,15 @@ a {
 .wish-card h3 {
   margin: 0;
   color: var(--color-primary);
-  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-size: clamp(1.55rem, 2.55vw, 2.08rem);
 }
 
 .wish-card p {
   margin: 18px 0 0;
   max-width: 440px;
-  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  font-family: var(--font-body);
+  font-size: clamp(0.96rem, 1.35vw, 1.04rem);
+  line-height: 1.7;
 }
 
 .section__heading {
@@ -452,7 +462,7 @@ a {
   align-self: end;
   color: var(--color-primary);
   font-family: var(--font-heading);
-  font-size: clamp(2.1rem, 3.4vw, 3.2rem);
+  font-size: clamp(2.05rem, 3.35vw, 3rem);
   line-height: 1;
 }
 
@@ -461,9 +471,10 @@ a {
   max-width: 170px;
   margin: 10px auto 0;
   color: var(--color-text);
-  font-family: var(--font-heading);
-  font-size: clamp(1.05rem, 1.7vw, 1.32rem);
-  line-height: 1.28;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.35vw, 1.05rem);
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .contacts {
@@ -480,11 +491,23 @@ a {
   width: min(880px, 100%);
   margin: 18px auto 0;
   color: var(--color-muted);
-  font-family: var(--font-body);
-  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  font-size: clamp(0.98rem, 1.45vw, 1.08rem);
   font-weight: 500;
   line-height: 1.7;
   text-align: center;
+}
+
+.contacts__intro a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(103, 6, 38, 0.24);
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.contacts__intro a:hover {
+  color: var(--color-primary-dark);
+  border-color: currentColor;
 }
 
 .contact-grid {
@@ -508,11 +531,12 @@ a {
 .contact-card h3 {
   margin: 0 0 8px;
   color: var(--color-primary);
-  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-size: clamp(1.65rem, 2.85vw, 2.22rem);
 }
 
 .contact-card > a {
   color: var(--color-text);
+  font-family: var(--font-ui);
   font-size: 1.04rem;
   font-weight: 600;
   text-decoration: none;
